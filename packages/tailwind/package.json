@@ -1,0 +1,28 @@
+{
+  "name": "@hback/tailwind",
+  "private": true,
+  "version": "0.1.0",
+  "main": "index.js",
+  "type": "module",
+  "exports": {
+    "./postcss.config": "./postcss.config.mjs",
+    "./style.css": "./src/style.css"
+  },
+  "scripts": {
+    "lint": "eslint"
+  },
+  "devDependencies": {
+    "@hback/eslint-config": "workspace:*",
+    "@hback/typescript-config": "workspace:*",
+    "eslint": "catalog:",
+    "typescript": "catalog:"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.10",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.10"
+  }
+}

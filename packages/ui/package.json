@@ -1,9 +1,13 @@
 {
-  "name": "@repo/ui",
+  "name": "@hback/ui",
   "version": "0.0.0",
   "private": true,
   "exports": {
-    "./*": "./src/*.tsx"
+    "./globals.css": "./src/styles/globals.css",
+    "./postcss.config": "./postcss.config.mjs",
+    "./lib/*": "./src/lib/*.ts",
+    "./c/*": "./src/components/*.tsx",
+    "./hooks/*": "./src/hooks/*.ts"
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0",
@@ -11,17 +15,18 @@
     "check-types": "tsc --noEmit"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
+    "@hback/eslint-config": "workspace:*",
+    "@hback/typescript-config": "workspace:*",
+    "@hback/tailwind": "workspace:*",
     "@turbo/gen": "^2.5.0",
     "@types/node": "^22.15.3",
-    "@types/react": "19.1.0",
-    "@types/react-dom": "19.1.1",
-    "eslint": "^9.29.0",
-    "typescript": "5.8.2"
+    "@types/react": "catalog:react19",
+    "@types/react-dom": "catalog:react19",
+    "eslint": "catalog:",
+    "typescript": "catalog:"
   },
   "dependencies": {
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react": "catalog:react19",
+    "react-dom": "catalog:react19"
   }
 }

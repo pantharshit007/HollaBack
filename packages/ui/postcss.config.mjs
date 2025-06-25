@@ -1,0 +1,1 @@
+export { default } from "@hback/tailwind/postcss.config";
