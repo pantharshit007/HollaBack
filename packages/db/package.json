@@ -1,0 +1,41 @@
+{
+  "name": "@hback/db",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false",
+    "with-env": "dotenv -e ../../.env --",
+    "db:docker": "bash ./start-db.sh",
+    "db:push": "pnpm with-env drizzle-kit push",
+    "db:studio": "pnpm with-env drizzle-kit studio",
+    "db:migrate": "pnpm with-env drizzle-kit migrate",
+    "db:generate": "pnpm with-env drizzle-kit generate",
+    "status": "pnpm with-env tsx ./src/check-status.ts"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.44.2",
+    "pg": "^8.16.3"
+  },
+  "devDependencies": {
+    "@hback/eslint-config": "workspace:*",
+    "@hback/typescript-config": "workspace:*",
+    "@types/node": "^22.15.3",
+    "@types/pg": "^8.15.4",
+    "dotenv-cli": "^8.0.0",
+    "drizzle-kit": "^0.31.3",
+    "eslint": "catalog:",
+    "prettier": "catalog:",
+    "tsx": "^4.20.3",
+    "typescript": "catalog:"
+  },
+  "keywords": [],
+  "author": "pantharshit007",
+  "license": "ISC"
+}
